@@ -2,6 +2,14 @@
 
 A simple in-browser i18n module, compatible with the [i18n-node](https://github.com/mashpie/i18n-node) server module data files. Meant to be use with a module bundler (like [parcel](https://parceljs.org)).
 
+## Installation
+
+By using npm:
+
+```
+npm i browser-i18n --save
+```
+
 ## Usage
 
 ```javascript
