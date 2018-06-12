@@ -112,7 +112,7 @@ export default class I18n {
         let textTranslated = this.localeFile[text];
 
         if(textTranslated === undefined){
-        	this.logger.log(`Missing translation in '${this.language + this.extension}', add:\n"${text}": "${text}"`)
+        	this._logger.log(`Missing translation in '${this.language + this.extension}', add:\n"${text}": "${text}"`)
         }
 
         if (arguments.length > 1) {
