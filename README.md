@@ -36,7 +36,7 @@ One file for each language. They may have the following structure:
 
 {
   "Hello": "Hello",
-  "Oh, hi %s!": "Oh, hi %s!"
+  "Oh, hi %s!": "Oh, hi %s!",
   "Bye!": "Bye!"
 }
 ```
@@ -45,7 +45,7 @@ One file for each language. They may have the following structure:
 
 {
   "Hello": "Bonjour",
-  "Oh, hi %s!": "Oh, salut %s!"
+  "Oh, hi %s!": "Oh, salut %s!",
   "Bye!": "Au revoir!"
 }
 ```
