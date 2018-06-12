@@ -68,14 +68,16 @@ export default class I18n {
         this._logger = {
             info: () => {},
             error: () => {},
-            log: () => {},
+            warn: () => {},
+            log: () => {}
         };
 
         if(this.config.verbose){
             this._logger = {
                 info: console.info,
                 error: console.error,
-                log: console.log,
+                warn: console.warn,
+                log: console.log
             }
         }
     }
@@ -108,6 +110,10 @@ export default class I18n {
      */
     __(text) {
         let textTranslated = this.localeFile[text];
+
+        if(textTranslated === undefined){
+        	this.logger.log(`Missing translation in '${this.language + this.extension}', add:\n"${text}": "${text}"`)
+        }
 
         if (arguments.length > 1) {
             textTranslated = vsprintf(textTranslated, Array.prototype.slice.call(arguments, 1));
