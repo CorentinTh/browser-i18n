@@ -1,6 +1,6 @@
 {
   "name": "browser-i18n",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Simple i18n module for the browser, compatible with the i18n server module data files.",
   "main": "./src/index.js",
   "scripts": {
