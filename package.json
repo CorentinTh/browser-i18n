@@ -1,0 +1,25 @@
+{
+  "name": "browser-i18n",
+  "version": "0.1.0",
+  "description": "Simple i18n module for the browser, compatible with the i18n server module data files.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "i18n",
+    "i18n browser",
+    "internationalization",
+    "languages"
+  ],
+  "author": "Corentin Th <corentin.thomasset74+npm@gmail.com> (https://github.com/CorentinTh)",
+  "license": "MIT",
+  "dependencies": {
+    "sprintf-js": "^1.1.1"
+  }
+}
