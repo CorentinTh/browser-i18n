@@ -99,7 +99,15 @@ export default class I18n {
      * @private
      */
     _onError() {
-        this._logger.error('[browser-i18n] Cannot get the file.');
+        const path = this.config.path + '/' + this.config.language + this.config.extension;
+        this._logger.error('[browser-i18n] Cannot get the file ' + path);
+
+        if(this.config.language !== 'en'){
+            this._logger.log('[browser-i18n] Trying to fall back to english.');
+            
+            this.config.language = 'en';
+            this._getFileFromServer();
+        }
     }
 
     /**
@@ -112,7 +120,7 @@ export default class I18n {
         let textTranslated = this.localeFile[text];
 
         if(textTranslated === undefined){
-        	this._logger.log(`Missing translation in '${this.language + this.extension}', add:\n"${text}": "${text}"`)
+        	this._logger.log(`Missing translation in '${this.config.language + this.config.extension}', add:\n"${text}": "${text}"`)
         }
 
         if (arguments.length > 1) {
